@@ -12,16 +12,16 @@ export const EditForm = ({ onUpdate, onCancel, onChange, currentTodo }) => {
       </BtnEdit>
 
       <FormBtn type="submit">
-        <RiSaveLine size="16px" color="green" />
+        <RiSaveLine size="16px" color="green" onUpdate />
       </FormBtn>
 
       <InputSearch
         placeholder="EDIT TODO"
         name="edit"
-        onChange={onChange}
         required
         defaultValue={currentTodo.text}
         autoFocus
+        onChange={onChange}
       />
     </SearchFormStyled>
   );
